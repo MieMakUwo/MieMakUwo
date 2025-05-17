@@ -133,7 +133,7 @@ p {
 .hamburger i {
     color: var(---yellow);
     font-size: 30px;
-    border: 3px solid var(---yellow);
+    /* border: 3px solid var(---yellow); */
     padding: 20px;
     border-radius: 50%;
     cursor: pointer;
@@ -165,11 +165,16 @@ p {
     position: relative;
 }
 
+
+
 .hero_details img {
-    width: 500px;
+    padding-top: 4rem;
+    max-width: 40vw;
     position: absolute;
     top: 0;
     left: 50%;
+    object-fit: contain;
+    border-radius: 70%;
 }
 
 .hero_title {
@@ -181,6 +186,16 @@ p {
     line-height: 1.5;
     margin-bottom: 1.8rem;
 }
+
+.hr-setengah {
+  width: 50%;
+  border: none;
+  border-radius: 30px;
+  height: 8px;
+  background-color: #ffa627; /* atau warna lain sesuai desain */
+  margin: 3rem auto; /* posisi tengah + spasi atas bawah */
+}
+
 
 /*=====MENU====*/
 .menu {
@@ -194,10 +209,10 @@ p {
 
 .menu_inner {
    grid-template-columns: repeat(2, 1fr);
-   margin-left: 5rem;
+   /* margin-left: 5rem; */
    margin-bottom: 1rem;
    background-color: var(--product-color);
-   padding:  0 0.5rem;
+   padding:  0 5rem;
    box-shadow: 0px 0px 1px var(---yellow);
 }
 
@@ -223,7 +238,7 @@ p {
 
 /*=====CATEGORIES=====*/
 .categories {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .categoroes_title {
@@ -400,6 +415,39 @@ span {
     color: var(---yellow);
 }
 
+/* FRANCISE */
+
+.outlet_section {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.outlet_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.outlet_card {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: auto;
+}
+
+.outlet_card i {
+  color: #e63946; /* warna ikon lokasi */
+  margin-right: 0.5rem;
+}
+
+ #map {
+      height: 200px;
+      width: auto;
+    }
+
+
 /*=====FOOTER=====*/
 .footer {
     margin-top: 5rem;
@@ -516,6 +564,9 @@ span {
     .menu_nav {
         width: 90%;
     }
+    .hamburger {
+
+    }
 
     .hero_details {
         grid-template-columns: 1fr;
@@ -524,7 +575,8 @@ span {
 
     .hero_details img {
         position: initial;
-        width: 350px;
+        max-width: 400px !important;
+        max-height: 400px !important;
     }
 
     .hero_content {
@@ -559,7 +611,8 @@ span {
     }
 
     .product_wrapper {
-        width: 100%;
+        width: 80%;
+        left: 2rem;    
     }
 
     .about_details {
@@ -568,8 +621,8 @@ span {
 
     .about_img {
         position: initial;
-        width: 350px;
-    }
+        width: 300px;
+        margin-left: 2rem;    }
 
     .about_content {
         margin-top: 3rem;
