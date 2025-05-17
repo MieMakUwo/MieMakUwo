@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!--=====SWIPER LINK=====-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
 
     <script src="assets/js/jquery-3.7.0.min.js"></script>
     <!--=====CSS LINK=====-->
@@ -28,7 +29,7 @@
                     <li class="nav_item"><a href="#order" class="nav_link">ORDER</a></li>
                     <li class="nav_item"><a href="#categories" class="nav_link">CATEGORIES</a></li>
                     <li class="nav_item"><a href="#about" class="nav_link">ABOUT</a></li>
-                    <li class="nav_item"><a href="#contact" class="nav_link">LOCATION</a></li>
+                    <li class="nav_item"><a href="#location" class="nav_link">LOCATION</a></li>
                 </ul>
             </div>
             <button type="button" class="sign_up">SIGN UP</button>
@@ -121,6 +122,7 @@
   </div>
 </section>
 
+<hr class="hr-setengah">
 
     <!--=====MENU SECTION=====-->
     <section class="menu" id="menu">
@@ -138,9 +140,7 @@
                             Level 1 Level 2 Level 3 <br>
                             Level 4 Level 5
                         </p>
-                        <div class="icon">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
+                       
                     </div>
                 </div>
 
@@ -155,9 +155,7 @@
                             Level 1 Level 2 Level 3 <br>
                             Level 4 Level 5
                         </p>
-                        <div class="icon">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -169,9 +167,7 @@
                             <i class="fa-solid fa-hat-chef"></i>
                         </div>
                         <p class="menu_inner_sub">Bisa request Saus, Sambal, Dan Kuah.</p>
-                        <div class="icon">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
+                       
                     </div>
                 </div>
 
@@ -183,9 +179,7 @@
                             <i class="fa-sharp fa-regular fa-hat-chef"></i>
                         </div>
                         <p class="menu_inner_sub">Bisa request Saus dan Sambal.</p>
-                        <div class="icon">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
+                       
                     </div>
                 </div>
                 <div class="menu_inner grid">
@@ -196,9 +190,7 @@
                             <i class="fa-sharp fa-regular fa-hat-chef"></i>
                         </div>
                         <p class="menu_inner_sub">Bisa request Saus dan Sambal.</p>
-                        <div class="icon">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
+                       
                     </div>
                 </div>
 
@@ -372,6 +364,22 @@
             </div>
         </div>
     </section>
+    <!-- FRANCISE -->
+     <section class="outlet_section" id="location">
+  <h2 style="    font-family: var(--h1-font);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(---white);">FRANCHISE</h2>
+  <div class="outlet_grid">
+        <div class="outlet_card">
+          <div id="map"></div>
+
+            <h3>Outlet Pusat</h3>
+            <p><i class="fa-solid fa-location-dot"></i> Jl. </p>
+        </div>
+  </div>
+</section>
+
     <!--=====FOOTER=====-->
     <footer class="footer" id="contact">
         <div class="footer_details container">
@@ -383,7 +391,7 @@
                     <li class="footer_nav_item"><a href="#order" class="footer_nav_link">ORDER</a></li>
                     <li class="footer_nav_item"><a href="#categories" class="footer_nav_link">CATEGORIES</a></li>
                     <li class="footer_nav_item"><a href="#about" class="footer_nav_link">ABOUT</a></li>
-                    <li class="footer_nav_item"><a href="#contact" class="footer_nav_link">LOCATION</a></li>
+                    <li class="footer_nav_item"><a href="#location" class="footer_nav_link">LOCATION</a></li>
                 </ul>
                 <div class="newsletter">
                     <h3>SUBSCRIBE TO OUR NEWSLETTER</h3>
@@ -393,7 +401,7 @@
                     </div>
                 </div>
             </div>
-            <p class="copyright">copyright by comell 2025</p>
+            <p class="copyright">copyright by UrPriority30 2025</p>
         </div>
     </footer>
     <!--=====SWIPER=====-->
@@ -416,5 +424,16 @@
         },
     });
     </script>
+    <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+<!-- JavaScript Map -->
+  <script>
+    var map = L.map('map').setView([51.505, -0.09], 13);
+
+    // Tambahkan tile layer dari OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+  </script>
 </body>
 </html>
