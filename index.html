@@ -364,18 +364,20 @@
             </div>
         </div>
     </section>
-    <!-- FRANCISE -->
+    <!-- LOCATION -->
      <section class="outlet_section" id="location">
   <h2 style="    font-family: var(--h1-font);
     font-weight: 700;
     font-size: 2rem;
-    color: var(---white);">FRANCHISE</h2>
+    color: var(---white);">LOCATION</h2>
   <div class="outlet_grid">
         <div class="outlet_card">
-          <div id="map"></div>
+          <div id="map">
 
-            <h3>Outlet Pusat</h3>
-            <p><i class="fa-solid fa-location-dot"></i> Jl. </p>
+          </div>
+
+            <h3 style="margin-top: 2rem;">Outlet Pusat</h3>
+            <p><i class="fa-solid fa-location-dot"></i> Jl. Bida Ayu Pintu 3 Jl. S. Parman, Mangsang, Sei Beduk, Batam City, Riau Islands 29444 </p>
         </div>
   </div>
 </section>
@@ -426,9 +428,12 @@
     </script>
     <!-- Leaflet JS -->
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
 <!-- JavaScript Map -->
   <script>
-    var map = L.map('map').setView([51.505, -0.09], 13);
+    var map = L.map('map').setView([1.0366042871841832, 104.05572585374934], 22);
+    //marker
+    L.marker([1.0366042871841832, 104.05572585374934]).addTo(map);
 
     // Tambahkan tile layer dari OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
